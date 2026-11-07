@@ -41,9 +41,6 @@ public sealed class FormTests
         return results;
     }
 
-    // --------------------------------------------
-    // RESOLVE WITH RETRY
-    // --------------------------------------------
 
     private FieldResolution ResolveWithRetry(
         Func<FieldResolution> resolve,
@@ -69,9 +66,6 @@ public sealed class FormTests
         return last;
     }
 
-    // --------------------------------------------
-    // EXPLAIN RESOLUTION
-    // --------------------------------------------
 
     private static string Explain(FieldResolution resolution)
     {
@@ -98,9 +92,6 @@ public sealed class FormTests
             $"score {resolution.Score}]";
     }
 
-    // --------------------------------------------
-    // TEST 1: FIRST NAME
-    // --------------------------------------------
 
     private TestResult TestFirstName(string expected)
     {
@@ -130,7 +121,6 @@ public sealed class FormTests
             input.Clear();
             input.SendKeys(expected);
 
-            // Verify the actual browser value.
             _wait.Until(_ =>
                 string.Equals(
                     input.GetDomProperty("value"),
@@ -154,10 +144,6 @@ public sealed class FormTests
             return Failure("First Name", ex.Message);
         }
     }
-
-    // --------------------------------------------
-    // TEST 2: GENDER RADIO BUTTON
-    // --------------------------------------------
 
     private TestResult TestGender(string expected)
     {
@@ -220,13 +206,8 @@ public sealed class FormTests
         }
     }
 
-    // --------------------------------------------
-    // ACTIVATE RADIO
-    // --------------------------------------------
-
     private void ActivateRadio(IWebElement radio)
     {
-        // First attempt direct interaction.
         try
         {
             if (radio.Displayed && radio.Enabled)
@@ -237,8 +218,7 @@ public sealed class FormTests
         }
         catch (ElementNotInteractableException)
         {
-            // Also handles ElementClickInterceptedException.
-            // Fall back to the associated visible label.
+
         }
 
         const string script = @"
@@ -277,9 +257,6 @@ public sealed class FormTests
         label.Click();
     }
 
-    // --------------------------------------------
-    // TEST 3: STATE DROPDOWN
-    // --------------------------------------------
 
     private TestResult TestState(string? expected)
     {
@@ -324,8 +301,7 @@ public sealed class FormTests
 
             var select = new SelectElement(dropdown);
 
-            // If State was provided, match it.
-            // Otherwise choose the first valid option.
+
             IWebElement? option =
                 string.IsNullOrWhiteSpace(expected)
                     ? select.Options.FirstOrDefault(
@@ -356,7 +332,6 @@ public sealed class FormTests
 
             select.SelectByText(wanted);
 
-            // Verify the selected option.
             _wait.Until(_ =>
                 Normalize(select.SelectedOption.Text) ==
                 Normalize(wanted)
@@ -378,10 +353,6 @@ public sealed class FormTests
         }
     }
 
-    // --------------------------------------------
-    // STATE PLACEHOLDER DETECTION
-    // --------------------------------------------
-
     private static bool IsPlaceholder(IWebElement option)
     {
         string text = Normalize(option.Text);
@@ -395,9 +366,6 @@ public sealed class FormTests
                text.StartsWith("-");
     }
 
-    // --------------------------------------------
-    // SHARED HELPERS
-    // --------------------------------------------
 
     private void ScrollIntoView(IWebElement element)
     {
