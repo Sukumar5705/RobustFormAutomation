@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Automation Test - Explicit Labels After Controls</title>
+  <style>body{font:16px Arial;max-width:680px;margin:40px auto;padding:0 20px}.field{margin:22px 0}input,select{padding:9px;margin-right:10px;width:260px}label{font-weight:bold}fieldset{margin:20px 0;padding:14px}fieldset label{margin-right:15px}</style>
+</head>
+<body>
+  <h1>Explicit labels after controls</h1>
+  <div class="field">
+    <input id="first-name-control" type="text" autocomplete="off">
+    <label for="first-name-control">First Name</label>
+  </div>
+  <fieldset>
+    <legend>Gender</legend>
+    <input id="gender-male" type="radio" name="gender" value="Male"><label for="gender-male">Male</label>
+    <input id="gender-female" type="radio" name="gender" value="Female"><label for="gender-female">Female</label>
+    <input id="gender-other" type="radio" name="gender" value="Other"><label for="gender-other">Other</label>
+  </fieldset>
+  <div class="field">
+    <select id="state-control"><option value="">Select</option><option value="India">India</option><option value="Telangana">Telangana</option></select>
+    <label for="state-control">State</label>
+  </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Automation Test - ARIA Labels</title>
+  <style>body{font:16px Arial;max-width:680px;margin:40px auto;padding:0 20px}label,.field{display:block;margin:18px 0}input,select{display:block;padding:9px;margin-top:6px;width:100%;max-width:420px}fieldset{margin:18px 0;padding:14px}fieldset label{display:inline-block;margin-right:18px}button{padding:9px 16px}</style>
+</head>
+<body>
+  <h1>ARIA label test</h1>
+  <p>Labels are supplied through aria-label and fieldset aria-label.</p>
+  <div class="field">
+    <input type="text" aria-label="First Name" autocomplete="off">
+  </div>
+  <fieldset aria-label="Gender">
+    <legend>Choose one</legend>
+    <label><input type="radio" name="gender" value="Male"><span>Male</span></label>
+    <label><input type="radio" name="gender" value="Female"><span>Female</span></label>
+    <label><input type="radio" name="gender" value="Other"><span>Other</span></label>
+  </fieldset>
+  <div class="field">
+    <select aria-label="State">
+      <option value="">Select a state</option><option value="India">India</option><option value="Telangana">Telangana</option><option value="Karnataka">Karnataka</option>
+    </select>
+  </div>
+</body>
+</html>

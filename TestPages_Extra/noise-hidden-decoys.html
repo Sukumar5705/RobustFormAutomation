@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Automation Test - Noise and Hidden Decoys</title>
+  <style>body{font:16px Arial;max-width:720px;margin:40px auto;padding:0 20px}.field{margin:20px 0}label{display:block;margin-bottom:6px}input,select{padding:9px;width:100%;max-width:420px}.hidden{display:none}.noise{margin:14px 0;padding:10px;background:#f2f2f2}</style>
+</head>
+<body>
+  <h1>Noise and decoy test</h1>
+  <p>Contains unrelated fields, a hidden duplicate, a disabled duplicate and similarly named text.</p>
+  <div class="noise">
+    <label for="email">Email Address</label><input id="email" type="email">
+    <label for="password">Password</label><input id="password" type="password">
+  </div>
+  <div class="field">
+    <label for="real-first">First Name</label>
+    <input id="real-first" type="text" autocomplete="off">
+  </div>
+  <div class="field hidden">
+    <label for="hidden-first">First Name</label>
+    <input id="hidden-first" type="text">
+  </div>
+  <div class="field">
+    <label for="disabled-first">First Name</label>
+    <input id="disabled-first" type="text" disabled>
+  </div>
+  <div class="field">
+    <label>Statement</label><input type="text">
+  </div>
+  <fieldset>
+    <legend>Gender</legend>
+    <label><input type="radio" name="gender" value="Male"><span>Male</span></label>
+    <label><input type="radio" name="gender" value="Female"><span>Female</span></label>
+    <label><input type="radio" name="gender" value="Other"><span>Other</span></label>
+  </fieldset>
+  <div class="field">
+    <label for="real-state">State</label>
+    <select id="real-state"><option value="">Select</option><option value="India">India</option><option value="Telangana">Telangana</option></select>
+  </div>
+  <div class="field">
+    <label for="disabled-state">State</label>
+    <select id="disabled-state" disabled><option value="">Select</option><option value="India">India</option></select>
+  </div>
+</body>
+</html>

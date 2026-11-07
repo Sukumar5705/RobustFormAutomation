@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Automation Test - Nested Layout</title>
+  <style>body{font:16px Arial;max-width:680px;margin:40px auto;padding:0 20px}.field{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center;margin:22px 0}.control input,.control select{padding:9px;width:100%;max-width:400px}.group{display:flex;gap:16px;flex-wrap:wrap}</style>
+</head>
+<body>
+  <h1>Nested layout test</h1>
+  <div class="field">
+    <div class="field-label">First Name</div>
+    <div class="control"><input type="text" autocomplete="off"></div>
+  </div>
+  <div class="field">
+    <div class="field-label">Gender</div>
+    <div class="group">
+      <div><input type="radio" name="gender" value="Male"><span>Male</span></div>
+      <div><input type="radio" name="gender" value="Female"><span>Female</span></div>
+      <div><input type="radio" name="gender" value="Other"><span>Other</span></div>
+    </div>
+  </div>
+  <div class="field">
+    <div class="field-label">State</div>
+    <div class="control">
+      <select><option value="">Select</option><option value="India">India</option><option value="Telangana">Telangana</option><option value="Goa">Goa</option></select>
+    </div>
+  </div>
+</body>
+</html>

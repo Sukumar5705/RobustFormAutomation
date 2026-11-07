@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Automation Test - Ambiguous Duplicate Fields</title>
+  <style>body{font:16px Arial;max-width:680px;margin:40px auto;padding:0 20px}.form-panel{border:1px solid #bbb;padding:16px;margin:18px 0}label{display:block;margin:10px 0 5px}input,select{padding:9px;width:100%;max-width:420px}fieldset{margin:20px 0;padding:14px}</style>
+</head>
+<body>
+  <h1>Ambiguous duplicate field test</h1>
+  <p>Two equally labelled First Name inputs and State dropdowns are intentional.</p>
+  <section class="form-panel">
+    <h2>Personal details</h2>
+    <label for="first-a">First Name</label><input id="first-a" type="text">
+    <label for="state-a">State</label>
+    <select id="state-a"><option value="">Select</option><option value="India">India</option><option value="Telangana">Telangana</option></select>
+  </section>
+  <section class="form-panel">
+    <h2>Alternate details</h2>
+    <label for="first-b">First Name</label><input id="first-b" type="text">
+    <label for="state-b">State</label>
+    <select id="state-b"><option value="">Select</option><option value="India">India</option><option value="Telangana">Telangana</option></select>
+  </section>
+  <fieldset>
+    <legend>Gender</legend>
+    <label><input type="radio" name="gender" value="Male"><span>Male</span></label>
+    <label><input type="radio" name="gender" value="Female"><span>Female</span></label>
+    <label><input type="radio" name="gender" value="Other"><span>Other</span></label>
+  </fieldset>
+</body>
+</html>

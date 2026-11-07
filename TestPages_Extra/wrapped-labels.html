@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Automation Test - Wrapping Labels</title>
+  <style>body{font:16px Arial;max-width:680px;margin:40px auto;padding:0 20px}.field{margin:20px 0}label{display:block;margin:10px 0}input[type=text],select{display:block;padding:9px;margin-top:7px;width:100%;max-width:420px}fieldset{margin:18px 0;padding:14px}fieldset label{display:inline-block;margin-right:18px}</style>
+</head>
+<body>
+  <h1>Wrapping label test</h1>
+  <label>First Name <input type="text" autocomplete="off"></label>
+  <fieldset>
+    <legend>Gender</legend>
+    <label><input type="radio" name="gender" value="Male"> Male</label>
+    <label><input type="radio" name="gender" value="Female"> Female</label>
+    <label><input type="radio" name="gender" value="Other"> Other</label>
+  </fieldset>
+  <label>State
+    <select>
+      <option value="">Choose a state</option><option value="India">India</option><option value="Telangana">Telangana</option><option value="Kerala">Kerala</option>
+    </select>
+  </label>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Automation Test - State Default Option</title>
+  <style>body{font:16px Arial;max-width:680px;margin:40px auto;padding:0 20px}.field{margin:20px 0}label{display:block;margin-bottom:6px}input,select{padding:9px;width:100%;max-width:420px}fieldset{margin:20px 0;padding:14px}</style>
+</head>
+<body>
+  <h1>State default-option test</h1>
+  <p>Run without --state to test first available non-placeholder option selection.</p>
+  <div class="field"><label for="first">First Name</label><input id="first" type="text"></div>
+  <fieldset>
+    <legend>Gender</legend>
+    <label><input type="radio" name="gender" value="Male"><span>Male</span></label>
+    <label><input type="radio" name="gender" value="Female"><span>Female</span></label>
+    <label><input type="radio" name="gender" value="Other"><span>Other</span></label>
+  </fieldset>
+  <div class="field">
+    <label for="state">State</label>
+    <select id="state">
+      <option value="">Select a state</option>
+      <option value="" disabled>Choose from the list</option>
+      <option value="India">India</option>
+      <option value="Telangana">Telangana</option>
+      <option value="Karnataka">Karnataka</option>
+    </select>
+  </div>
+</body>
+</html>

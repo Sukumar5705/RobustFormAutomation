@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Automation Test - Plain Adjacent Labels</title>
+  <style>body{font:16px Arial;max-width:680px;margin:40px auto;padding:0 20px}.field{margin:20px 0}input,select{display:block;padding:9px;margin-top:6px;width:100%;max-width:420px}.radio-options{margin:8px 0} .radio-options label{margin-right:18px}</style>
+</head>
+<body>
+  <h1>Plain adjacent label test</h1>
+  <div class="field">
+    <label>First Name</label>
+    <input type="text" autocomplete="off">
+  </div>
+  <div class="field">
+    <label>Gender</label>
+    <div class="radio-options">
+      <label><input type="radio" name="gender" value="Male"><span>Male</span></label>
+      <label><input type="radio" name="gender" value="Female"><span>Female</span></label>
+      <label><input type="radio" name="gender" value="Other"><span>Other</span></label>
+    </div>
+  </div>
+  <div class="field">
+    <label>State</label>
+    <select>
+      <option value="">Select</option><option value="India">India</option><option value="Telangana">Telangana</option><option value="Tamil Nadu">Tamil Nadu</option>
+    </select>
+  </div>
+</body>
+</html>
